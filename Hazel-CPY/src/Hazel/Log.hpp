@@ -13,11 +13,11 @@
 #define LOG_ENGINE_FATAL(...) ::Hazel::Log::getCoreLogger()->fatal(__VA_ARGS__)    // FATAL ENGINE SIDE MACRO DEFINITION 
 
 // CORE CLIENT LOG MACROS 
-#define LOG_ENGINE_ERROR(...) ::Hazel::Log::getClientLogger()->error(__VA_ARGS__)  // ERROR ENGINE SIDE MACRO DEFINITION 
-#define LOG_ENGINE_WARN(...)  ::Hazel::Log::getClientLogger()->warn(__VA_ARGS__)   // WARN ENGINE SIDE MACRO DEFINITION 
-#define LOG_ENGINE_INFO(...)  ::Hazel::Log::getClientLogger()->info(__VA_ARGS__)   // INFO ENGINE SIDE MACRO DEFINITION 
-#define LOG_ENGINE_TRACE(...) ::Hazel::Log::getClientLogger()->trace(__VA_ARGS__)  // TRACE ENGINE SIDE MACRO DEFINITION 
-#define LOG_ENGINE_FATAL(...) ::Hazel::Log::getClientLogger()->fatal(__VA_ARGS__)  // FATAL ENGINE SIDE MACRO DEFINITION 
+#define LOG_CLIENT_ERROR(...) ::Hazel::Log::getClientLogger()->error(__VA_ARGS__)  // ERROR ENGINE SIDE MACRO DEFINITION 
+#define LOG_CLIENT_WARN(...)  ::Hazel::Log::getClientLogger()->warn(__VA_ARGS__)   // WARN ENGINE SIDE MACRO DEFINITION 
+#define LOG_CLIENT_INFO(...)  ::Hazel::Log::getClientLogger()->info(__VA_ARGS__)   // INFO ENGINE SIDE MACRO DEFINITION 
+#define LOG_CLIENT_TRACE(...) ::Hazel::Log::getClientLogger()->trace(__VA_ARGS__)  // TRACE ENGINE SIDE MACRO DEFINITION 
+#define LOG_CLIENT_FATAL(...) ::Hazel::Log::getClientLogger()->fatal(__VA_ARGS__)  // FATAL ENGINE SIDE MACRO DEFINITION 
  
 namespace Hazel
 {

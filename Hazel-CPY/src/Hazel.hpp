@@ -5,6 +5,7 @@ This hpp file is only for usage by Hazel applications, for now they are :
 
 #pragma once
 #include "Hazel/Application.hpp"
+#include "Hazel/Log.hpp"
 
 // ---- Entry Point --------
 #include "Hazel/EntryPoint.hpp"
