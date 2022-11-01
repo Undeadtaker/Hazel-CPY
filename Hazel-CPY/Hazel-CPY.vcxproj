@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C7D967E4-6A61-4D29-8AED-C4A961A769D4}</ProjectGuid>
+    <ProjectGuid>{D222A4DC-3E8D-5853-87CB-09F9F37436A8}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Hazel-CPY</RootNamespace>
@@ -55,22 +55,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-x64\Hazel-CPY\</OutDir>
-    <IntDir>..\bin-intermediaries\Debug-x64\Hazel-CPY\</IntDir>
+    <OutDir>bin\Debug-x64\Hazel-CPY\</OutDir>
+    <IntDir>bin-intermediaries\Debug-x64\Hazel-CPY\</IntDir>
     <TargetName>Hazel-CPY</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-x64\Hazel-CPY\</OutDir>
-    <IntDir>..\bin-intermediaries\Release-x64\Hazel-CPY\</IntDir>
+    <OutDir>bin\Release-x64\Hazel-CPY\</OutDir>
+    <IntDir>bin-intermediaries\Release-x64\Hazel-CPY\</IntDir>
     <TargetName>Hazel-CPY</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Dist-x64\Hazel-CPY\</OutDir>
-    <IntDir>..\bin-intermediaries\Dist-x64\Hazel-CPY\</IntDir>
+    <OutDir>bin\Dist-x64\Hazel-CPY\</OutDir>
+    <IntDir>bin-intermediaries\Dist-x64\Hazel-CPY\</IntDir>
     <TargetName>Hazel-CPY</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>HZ_PLATFORM_WINDOWS;HZ_BUILD_DLL;HZ_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -89,10 +89,10 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\bin\Debug-x64\Hazel-CPY\Hazel-CPY.lib</ImportLibrary>
+      <ImportLibrary>bin\Debug-x64\Hazel-CPY\Hazel-CPY.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-x64\Hazel-CPY\Hazel-CPY.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-x64\Hazel-CPY\Hazel-CPY.dll Hazel-CPY\bin\Debug-x64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-x64\Hazel-CPY\Hazel-CPY.dll Hazel-CPY\bin\Debug-x64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST bin\Debug-x64\Hazel-CPY\Hazel-CPY.dll\ (xcopy /Q /E /Y /I bin\Debug-x64\Hazel-CPY\Hazel-CPY.dll bin\Debug-x64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I bin\Debug-x64\Hazel-CPY\Hazel-CPY.dll bin\Debug-x64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -100,7 +100,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>HZ_PLATFORM_WINDOWS;HZ_BUILD_DLL;HZ_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -114,10 +114,10 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\bin\Release-x64\Hazel-CPY\Hazel-CPY.lib</ImportLibrary>
+      <ImportLibrary>bin\Release-x64\Hazel-CPY\Hazel-CPY.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-x64\Hazel-CPY\Hazel-CPY.dll\ (xcopy /Q /E /Y /I ..\bin\Release-x64\Hazel-CPY\Hazel-CPY.dll Hazel-CPY\bin\Release-x64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-x64\Hazel-CPY\Hazel-CPY.dll Hazel-CPY\bin\Release-x64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST bin\Release-x64\Hazel-CPY\Hazel-CPY.dll\ (xcopy /Q /E /Y /I bin\Release-x64\Hazel-CPY\Hazel-CPY.dll bin\Release-x64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I bin\Release-x64\Hazel-CPY\Hazel-CPY.dll bin\Release-x64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -125,7 +125,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>HZ_PLATFORM_WINDOWS;HZ_BUILD_DLL;HZ_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -139,10 +139,10 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\bin\Dist-x64\Hazel-CPY\Hazel-CPY.lib</ImportLibrary>
+      <ImportLibrary>bin\Dist-x64\Hazel-CPY\Hazel-CPY.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-x64\Hazel-CPY\Hazel-CPY.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-x64\Hazel-CPY\Hazel-CPY.dll Hazel-CPY\bin\Dist-x64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-x64\Hazel-CPY\Hazel-CPY.dll Hazel-CPY\bin\Dist-x64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST bin\Dist-x64\Hazel-CPY\Hazel-CPY.dll\ (xcopy /Q /E /Y /I bin\Dist-x64\Hazel-CPY\Hazel-CPY.dll bin\Dist-x64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I bin\Dist-x64\Hazel-CPY\Hazel-CPY.dll bin\Dist-x64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

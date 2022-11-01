@@ -1,5 +1,7 @@
-workspace "Hazel"
+workspace "Hazel-CPY"
 	architecture "x64"
+	location "Hazel-CPY"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -16,8 +18,8 @@ project "Hazel-CPY"
 	kind "SharedLib"
 	language "C++"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-intermediaries/" .. outputdir .. "/%{prj.name}")
+	targetdir ("%{prj.name}/bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("%{prj.name}/bin-intermediaries/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
@@ -44,7 +46,7 @@ project "Hazel-CPY"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} Hazel-CPY/bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -65,8 +67,8 @@ project "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-intermediaries/" .. outputdir .. "/%{prj.name}")
+	targetdir ("Hazel-CPY/bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("Hazel-CPY/bin-intermediaries/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{

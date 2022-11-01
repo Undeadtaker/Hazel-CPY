@@ -55,22 +55,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-x64\Sandbox\</OutDir>
-    <IntDir>..\bin-intermediaries\Debug-x64\Sandbox\</IntDir>
+    <OutDir>..\Hazel-CPY\bin\Debug-x64\Sandbox\</OutDir>
+    <IntDir>..\Hazel-CPY\bin-intermediaries\Debug-x64\Sandbox\</IntDir>
     <TargetName>Sandbox</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-x64\Sandbox\</OutDir>
-    <IntDir>..\bin-intermediaries\Release-x64\Sandbox\</IntDir>
+    <OutDir>..\Hazel-CPY\bin\Release-x64\Sandbox\</OutDir>
+    <IntDir>..\Hazel-CPY\bin-intermediaries\Release-x64\Sandbox\</IntDir>
     <TargetName>Sandbox</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Dist-x64\Sandbox\</OutDir>
-    <IntDir>..\bin-intermediaries\Dist-x64\Sandbox\</IntDir>
+    <OutDir>..\Hazel-CPY\bin\Dist-x64\Sandbox\</OutDir>
+    <IntDir>..\Hazel-CPY\bin-intermediaries\Dist-x64\Sandbox\</IntDir>
     <TargetName>Sandbox</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
