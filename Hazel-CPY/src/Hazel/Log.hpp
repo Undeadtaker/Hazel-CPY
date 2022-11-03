@@ -4,6 +4,7 @@
 #include <memory>
 #include "Core.hpp"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 // CORE ENGINE LOG MACROS 
 #define LOG_ENGINE_ERROR(...) ::Hazel::Log::getCoreLogger()->error(__VA_ARGS__)    // ERROR ENGINE SIDE MACRO DEFINITION 
