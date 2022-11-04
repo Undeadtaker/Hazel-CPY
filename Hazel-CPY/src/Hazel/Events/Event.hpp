@@ -1,13 +1,11 @@
+#include "hzpzh.hpp"
 #pragma once
 
-#include "Core.hpp"
-
-#include <string>
-#include <functional>
+#include "../Core.hpp"
 
 namespace Hazel
 {
-	/* 
+	/*
 		Events in Hazel are currently blocking, meaning when an event occurs it
 		immediately gets dispatched and must be dealt with right then and there.
 		For the future, a better strategy might be to buffer events in an event
@@ -28,20 +26,20 @@ namespace Hazel
 	enum EventCategory
 	{
 		None = 0,
-		EventCategoryApplication	= BIT(0),
-		EventCategoryInput			= BIT(1),
-		EventCategoryKeyboard		= BIT(2),
-		EventCategoryMouse			= BIT(3),
-		EventCategoryMouseButton	= BIT(4)
+		EventCategoryApplication = BIT(0),
+		EventCategoryInput = BIT(1),
+		EventCategoryKeyboard = BIT(2),
+		EventCategoryMouse = BIT(3),
+		EventCategoryMouseButton = BIT(4)
 	};
 
 	// Since the event is a base class, we can define a macro for the rest 
 	// of the derived classes to deduce their types and their category
-	#define EVENT_CLASS_TYPE(type) static EventType getStaticType() { return EventType::##type; } \
+#define EVENT_CLASS_TYPE(type) static EventType getStaticType() { return EventType::##type; } \
 									virtual EventType getEventType() const override { return getStaticType(); } \
 									virtual const char* getName() const override {return #type;}
 
-	#define EVENT_CLASS_CATEGORY(category) virtual int getCategoryFlags() const override { return category; }
+#define EVENT_CLASS_CATEGORY(category) virtual int getCategoryFlags() const override { return category; }
 
 	class HAZEL_API Event
 	{
@@ -63,7 +61,7 @@ namespace Hazel
 
 		// This method calls the category flag of the base Event class and compares it 
 		// to the subset and checks whether the event is within that set.
-		inline bool isInCategory(EventCategory event) { return this->getCategoryFlags() & event; } 
+		inline bool isInCategory(EventCategory event) { return this->getCategoryFlags() & event; }
 	};
 
 	class EventDispatcher
@@ -71,7 +69,7 @@ namespace Hazel
 	private:
 		Event& event;
 
-		template<typename T> 
+		template<typename T>
 		using EventFn = std::function<bool(T&)>;
 
 		inline friend std::ostream& operator<<(std::ostream& os, Event& e) { return os << e.toString(); }

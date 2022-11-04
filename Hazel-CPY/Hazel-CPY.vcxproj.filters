@@ -22,9 +22,6 @@
     <ClInclude Include="src\Hazel\Events\ApplicationEvent.hpp">
       <Filter>Hazel\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Hazel\Events\Event.hpp">
-      <Filter>Hazel\Events</Filter>
-    </ClInclude>
     <ClInclude Include="src\Hazel\Events\KeyEvent.hpp">
       <Filter>Hazel\Events</Filter>
     </ClInclude>
@@ -34,6 +31,8 @@
     <ClInclude Include="src\Hazel\Log.hpp">
       <Filter>Hazel</Filter>
     </ClInclude>
+    <ClInclude Include="src\hzpzh.hpp" />
+    <ClInclude Include="src\Hazel\Events\Event.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Application.cpp">
@@ -42,5 +41,6 @@
     <ClCompile Include="src\Hazel\Log.cpp">
       <Filter>Hazel</Filter>
     </ClCompile>
+    <ClCompile Include="src\hzpzh.cpp" />
   </ItemGroup>
 </Project>

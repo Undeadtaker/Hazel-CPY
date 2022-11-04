@@ -21,6 +21,9 @@ project "Hazel-CPY"
 	targetdir ("%{prj.name}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{prj.name}/bin-intermediaries/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "hzpzh.hpp"
+	pchsource "%{prj.name}/src/hzpzh.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.hpp",
